@@ -1,6 +1,19 @@
 #include <iostream>
+using namespace std; 
 #include <random>
 //Ana Rosario
+
+
+void displayQuestions (string rules) { //function to display game rules. Passing by value not reference
+  
+  if (rules == "Y" || rules == "y") { //covers both Y and y. proud of this :3
+    cout << " \n" << "*************************************************************************\n" << "\n"<< "⦿ We will give you 5 opportunities to guess the number correctly.\n" << "⦿ The number will range from 0 to 99.\n" <<"⦿ Every correct guess gets you 1 point.\n⦿ You need 2 points to win.\n⦿ The number will change after every round. \n⦿ Hints will be offered.\n⦿ There are no consequences for using hints.\n\n" ;
+  } else if (rules == "N" || rules == "n") {
+  cout << "\n"<< "Too cool for rules... we like that.\n\n";
+    
+  }
+  
+}
 
 int main() {
 
@@ -40,13 +53,17 @@ int main() {
     cout <<"\n";
     cout << "Welcome to Guess the Number! See game rules? (Y/N) "; 
     cin >> rules;
+    displayQuestions(rules); //calling function with rules
+
+  // this is where the code for game rules was. I moved to this a function.  VVVVVVVVV
 
 
-  if (rules == "Y" || rules == "y") { //covers both Y and y. proud of this :3
-    cout << " \n" << "*************************************************************************\n" << "\n"<< "⦿ We will give you 5 opportunities to guess the number correctly.\n" << "⦿ The number will range from 0 to 99.\n" <<"⦿ Every correct guess gets you 1 point.\n⦿ You need 2 points to win.\n⦿ The number will change after every round. \n⦿ Hints will be offered.\n⦿ There are no consequences for using hints.\n\n" ;
-  } else if (rules == "N" || rules == "n") {
-  cout << "\n"<< "Too cool for rules... we like that.\n\n";
-  }
+  
+  // if (rules == "Y" || rules == "y") { //covers both Y and y. proud of this :3
+  //   cout << " \n" << "*************************************************************************\n" << "\n"<< "⦿ We will give you 5 opportunities to guess the number correctly.\n" << "⦿ The number will range from 0 to 99.\n" <<"⦿ Every correct guess gets you 1 point.\n⦿ You need 2 points to win.\n⦿ The number will change after every round. \n⦿ Hints will be offered.\n⦿ There are no consequences for using hints.\n\n" ;
+  // } else if (rules == "N" || rules == "n") {
+  // cout << "\n"<< "Too cool for rules... we like that.\n\n";
+  // }
 
   cout << "*************************************************************************\n\n";
   cout << "Are you ready (Y/N)? ";
