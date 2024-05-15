@@ -16,7 +16,8 @@ void displayQuestions (string rules) { //function to display game rules. Passing
 }
 
 
-void generateRandomNumbers(int random_numbers[], std::mt19937 &gen, std::uniform_int_distribution<int> &distribution) {
+void generateRandomNumbers(int random_numbers[], std::mt19937 // passing values in for ran num gen. stores ran nums in array random_numbers
+ &gen, std::uniform_int_distribution<int> &distribution) {
     for (int i = 0; i < 3; i++) {
         random_numbers[i] = distribution(gen);
     }
