@@ -15,6 +15,14 @@ void displayQuestions (string rules) { //function to display game rules. Passing
   
 }
 
+
+void generateRandomNumbers(int random_numbers[], std::mt19937 &gen, std::uniform_int_distribution<int> &distribution) {
+    for (int i = 0; i < 3; i++) {
+        random_numbers[i] = distribution(gen);
+    }
+}
+
+
 int main() {
 
   using std::cout;
@@ -30,11 +38,24 @@ int main() {
 
 
 
+int random_numbers[3]; //init array 
+generateRandomNumbers(random_numbers, gen, distribution); //call function for random numbers, passing in values
 
-  // Generate 3 random numbers
-    int random_number = distribution(gen);
-  int random_number2 = distribution(gen);
-  int random_number3 = distribution(gen);
+  int random_number = random_numbers[0];
+  int random_number2 = random_numbers[1];
+  int random_number3 = random_numbers[2];
+
+
+  // old code being replaced  VVVVV
+
+  
+  // // Generate 3 random numbers
+  //   int random_number = distribution(gen);
+  // int random_number2 = distribution(gen);
+  // int random_number3 = distribution(gen);
+
+
+  
   int guess{0};
   int chances{0};
   int chances2{0};
